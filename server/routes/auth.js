@@ -38,15 +38,15 @@ router.route("/password/forgot").post(forgotPassword);
 router.route("/password/reset/:token").post(resetPassword);
 router.route("/myprofile").get(isAuthenticatedUser, getUserProfile);
 router.route("/password/change").put(isAuthenticatedUser, changePassword);
-router.route("/update").put(isAuthenticatedUser, updateProfile);
+// router.route("/update").put(isAuthenticatedUser, updateProfile);
 
-//Admin routes
-router
-  .route("/admin/users")
-  .get(isAuthenticatedUser, authorizedRoles("admin"), getAllUsers);
-router
-  .route("/admin/user/:id")
-  .get(isAuthenticatedUser, authorizedRoles("admin"), getUser)
-  .put(isAuthenticatedUser, authorizedRoles("admin"), updateUser)
-  .delete(isAuthenticatedUser, authorizedRoles("admin"), deleteUser);
+// //Admin routes
+// router
+//   .route("/admin/users")
+//   .get(isAuthenticatedUser, authorizedRoles("admin"), getAllUsers);
+// router
+//   .route("/admin/user/:id")
+//   .get(isAuthenticatedUser, authorizedRoles("admin"), getUser)
+//   .put(isAuthenticatedUser, authorizedRoles("admin"), updateUser)
+//   .delete(isAuthenticatedUser, authorizedRoles("admin"), deleteUser);
 module.exports = router;

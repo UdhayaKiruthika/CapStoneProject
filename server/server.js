@@ -23,4 +23,3 @@ process.on("uncaughtException", (err) => {
     process.exit(1);
   });
 });
-//console.log(a);
